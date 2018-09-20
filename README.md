@@ -2,7 +2,7 @@
 
 # PHYS220/MATH220/CPSC220 CW 4
 
-**Author(s):** **CHANGEME**
+**Author(s):** **Gwyneth Casey, Jack Savage, Enea Dodi**
 
 ## Specification
 
@@ -39,4 +39,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**YOURNAMES**
+**Gwyneth Casey, Enea Dodi, Jack Savage**
