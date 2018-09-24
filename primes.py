@@ -11,6 +11,7 @@
 This module contains the eratosthanes function that generates
 primes up to the value of positive integer input n'''
 
+
 def eratosthanes(n):
     '''Erastosthanes function
     Args: n - positive integer
@@ -28,7 +29,7 @@ def eratosthanes(n):
     # obtaining divisor and removing even multiples of divisor
     for divisor in numbers:
         if divisor> math.sqrt(n):
-        break
+            break
         for number in numbers:
             if (number%divisor == 0 and number>divisor):
                 numbers.remove(number)
@@ -37,4 +38,12 @@ def eratosthanes(n):
 
 def gen_eratosthanes():
     while True:
-        
+        numbers = list(range(10000))
+        numbers.remove(0)
+        numbers.remove(1)
+    
+        for divisor in numbers:
+            for number in numbers:
+                if (number%divisor == 0 and number>divisor):
+                    numbers.remove(number)
+            yield divisor
