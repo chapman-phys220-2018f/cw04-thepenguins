@@ -12,7 +12,7 @@ This module contains the eratosthanes function that generates
 primes up to the value of positive integer input n'''
 
 
-def eratosthanes(n):
+def eratosthenes(n):
     '''Erastosthanes function
     Args: n - positive integer
     Returns: list of all primes less than n'''
@@ -36,7 +36,7 @@ def eratosthanes(n):
     
     return numbers
 
-def gen_eratosthanes():
+def gen_eratosthenes():
     while True:
         numbers = list(range(10000))
         numbers.remove(0)
