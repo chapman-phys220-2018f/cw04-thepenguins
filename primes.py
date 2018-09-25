@@ -17,6 +17,8 @@ def eratosthenes(n):
     Args: n - positive integer
     Returns: list of all primes less than n'''
     
+    import math
+
     # ensures positive integer entry value
     if n < 1:
         raise Exception('Please enter a value larger than 0')
@@ -37,7 +39,6 @@ def eratosthenes(n):
     return numbers
 
 def gen_eratosthenes():
-    import math
     while True:
         numbers = list(range(10000))
         numbers.remove(0)
