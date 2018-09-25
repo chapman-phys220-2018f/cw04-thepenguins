@@ -37,6 +37,7 @@ def eratosthenes(n):
     return numbers
 
 def gen_eratosthenes():
+    import math
     while True:
         numbers = list(range(10000))
         numbers.remove(0)
