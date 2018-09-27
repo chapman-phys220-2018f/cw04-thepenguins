@@ -27,6 +27,7 @@ def eratosthenes(n):
     #removes all even numbers
     nums = [a for a in nums if ((a % 2 != 0) or (a==2))]
     
+    #removes everything that isnt a prime number
     for i in nums:
         if i > math.sqrt(n):
             break
@@ -46,6 +47,7 @@ def gen_eratosthenes():
     b = 0
     while True:
         i = i+1
+        #nums.extend(list(range(nums[-1],(nums[-1]+int(math.sqrt(nums[-1])),2))))
         b = nums[i]
         yield b
         for num in nums:
