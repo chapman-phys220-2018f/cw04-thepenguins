@@ -39,17 +39,25 @@ def eratosthenes(n):
     return nums
 
 def gen_eratosthenes():
-    n = 10000
-    nums = list(range(n))
-    nums = nums[2:]
-    nums = [a for a in nums if ((a % 2 != 0) or (a==2))]
-    i = -1
-    b = 0
+    n = set()
+    i = 0
+    a = 2
+    checker = False
     while True:
-        i = i+1
-        #nums.extend(list(range(nums[-1],(nums[-1]+int(math.sqrt(nums[-1])),2))))
-        b = nums[i]
-        yield b
-        for num in nums:
-            if(num != b and num%b == 0):
-                nums.remove(num)
+        i = i + 1
+        if i == 1:
+            continue
+        elif i == 2:
+            n.add(2)
+            yield 2
+        else:
+            checker = True
+            while checker:
+                checker = False
+                for j in n:
+                    if (a%j) == 0:
+                        a = a+1
+                        checker = True
+                        break
+            n.add(a)
+            yield a
